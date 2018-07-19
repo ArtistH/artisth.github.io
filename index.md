@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: home
+title: Home Page
 ---
 
 Linux System Install & Config
