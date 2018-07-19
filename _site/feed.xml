@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-19T19:15:58+08:00</updated><id>http://localhost:4000/</id><title type="html">Artist’s Blog</title><subtitle>To see a World in a Grain of Sand, And a Heaven in a Wild Flower. Hold Infinity in the palm of your hand, And Eternity in an hour.</subtitle><entry><title type="html">c++ programming style</title><link href="http://localhost:4000/2018/07/19/c++_styple.html" rel="alternate" type="text/html" title="c++ programming style" /><published>2018-07-19T00:00:00+08:00</published><updated>2018-07-19T00:00:00+08:00</updated><id>http://localhost:4000/2018/07/19/c++_styple</id><content type="html" xml:base="http://localhost:4000/2018/07/19/c++_styple.html">&lt;h3 id=&quot;1-定义引用一律靠近类型-t-a-取变量地址一律靠近变量-a&quot;&gt;1. 定义引用一律靠近类型: T&amp;amp; a; 取变量地址一律靠近变量: &amp;amp;a;&lt;/h3&gt;
+&lt;h3 id=&quot;2-定义指针变量一律靠近类型-t-p-取指针内容一律靠近变量-p&quot;&gt;2. 定义指针变量一律靠近类型: T* p; 取指针内容一律靠近变量: *p;&lt;/h3&gt;
+
+&lt;p&gt;NOTE: 对于1, 2两点的定义部分, 要求一个变量定义一行, 即避免T* p, *q这种定义方式.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-标准模板库尽量用std-而不用using-这样可以与自定义类型区分&quot;&gt;3. 标准模板库尽量用std::, 而不用using, 这样可以与自定义类型区分.&lt;/h3&gt;
+
+&lt;h3 id=&quot;4-c-primmer-一旦某个函数被声明称虚函数-则在所有派生类中它都是虚函数&quot;&gt;4. «C++ primmer»: 一旦某个函数被声明称虚函数, 则在所有派生类中它都是虚函数.&lt;/h3&gt;
+&lt;p&gt;NOTE: 虽然如此, 但我习惯在派生类中声明时仍然注明virtual, 这样更清楚知道此函数为虚函数, 因为有时候只看到派生类而不用去寻找基类的定义.(析构函数则只在基类中注明virtual就可了, 派生类中就不注明了, 这是我的习惯.)&lt;/p&gt;</content><author><name></name></author><category term="c++_programming" /><summary type="html">1. 定义引用一律靠近类型: T&amp;amp; a; 取变量地址一律靠近变量: &amp;amp;a; 2. 定义指针变量一律靠近类型: T* p; 取指针内容一律靠近变量: *p;</summary></entry><entry><title type="html">c programming style</title><link href="http://localhost:4000/2018/07/12/c-style.html" rel="alternate" type="text/html" title="c programming style" /><published>2018-07-12T00:00:00+08:00</published><updated>2018-07-12T00:00:00+08:00</updated><id>http://localhost:4000/2018/07/12/c-style</id><content type="html" xml:base="http://localhost:4000/2018/07/12/c-style.html">&lt;h3 id=&quot;1-函数返回类型与函数名分两行写&quot;&gt;1. 函数返回类型与函数名分两行写&lt;/h3&gt;
+&lt;h3 id=&quot;2-for-while-do-while-if-else-kr风格&quot;&gt;2. for, while, do-while, if-else K&amp;amp;R风格&lt;/h3&gt;
+&lt;h4 id=&quot;if-else&quot;&gt;if-else:&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1&amp;gt;
+	if () {
+    	...;
+        ...;
+	} else {
+    	...;
+    	...;
+    }
+2&amp;gt;
+    if ()
+    	...;
+	else
+    	...;
+3&amp;gt;
+	if () {
+		...;
+		...;
+	} else
+		...;
+4&amp;gt;
+	if ()
+		...;
+	else {
+		...;
+		...;
+	} #### switch case:
+switch (char) {
+case a:
+	...;
+	...;
+	...;
+case b:
+	...;
+default:
+	...;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-代码段以空行分界头文件-宏-变量定义-函数体-for-while-do-while-if-else-等语句块&quot;&gt;3. 代码段以空行分界(头文件, 宏, 变量定义, 函数体, for, while, do-while, if-else 等语句块);&lt;/h3&gt;
+&lt;h3 id=&quot;4-运算符两边加空格-自增自减运算符除外-数组中元素除外&quot;&gt;4. 运算符两边加空格, 自增自减运算符除外, 数组中[]元素除外;&lt;/h3&gt;
+&lt;h3 id=&quot;5-include-和--或--之间留空格&quot;&gt;5. include 和 &amp;lt;&amp;gt; 或 “” 之间留空格;&lt;/h3&gt;
+&lt;h3 id=&quot;6-comment&quot;&gt;6. comment&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    1) File
+    /*
+     * File: filename.c
+     * ----------------
+     * Description:
+     * Author(Non-essential): Artist, artist.gnu@gmail.com
+     * Date(Non-essential): Jan, 1, 2008
+     *                      Feb
+     *                      Mar
+     *                      Apr
+     *                      May
+     *                      Jun
+     *                      Jul
+     *                      Aug
+     *                      Sep
+     *                      Oct
+     *                      Nov
+     *                      Dec
+     * Modify(Non-essential):
+     */
+
+    2) Function
+    /*
+     * Function: int main(int argc, char *argv[]);
+     * -------------------------------------------
+     * Return Value(Non-essential):
+     * Description:
+     * Author(Non-essential):
+     * Date(Non-essential):
+     * Modify(Non-essential):
+     */
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="c_programming" /><summary type="html">1. 函数返回类型与函数名分两行写 2. for, while, do-while, if-else K&amp;amp;R风格 if-else: 1&amp;gt; if () { ...; ...; } else { ...; ...; } 2&amp;gt; if () ...; else ...; 3&amp;gt; if () { ...; ...; } else ...; 4&amp;gt; if () ...; else { ...; ...; } #### switch case: switch (char) { case a: ...; ...; ...; case b: ...; default: ...; }</summary></entry></feed>
