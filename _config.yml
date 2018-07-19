@@ -1,10 +1,8 @@
 title: Artist's Blog
 email: artist.h@cloud.com
 description: >- # this means to ignore newlines until "baseurl:"
-    To see a World in a Grain of Sand,
-    And a Heaven in a Wild Flower.
-    Hold Infinity in the palm of your hand,
-    And Eternity in an hour.
+    To see a World in a Grain of Sand, And a Heaven in a Wild Flower.<br>
+    Hold Infinity in the palm of your hand, And Eternity in an hour.<br>
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
