@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Artist's Blog
 ---
 
 Linux System Install & Config
