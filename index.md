@@ -3,11 +3,11 @@ layout: home
 title: Home Page
 ---
 
-Linux System Install & Config
-=============================
-[Arch](https://github.com/ArtistH/config/blob/master/Arch.md)
-[CentOS](https://github.com/ArtistH/config/blob/master/CentOS.md)
-[Ubuntu](https://github.com/ArtistH/config/blob/master/Ubuntu.md)
+Using Linux System
+==================
+[Install & Config](https://github.com/ArtistH/config)
+
+[Toolchain](https://github.com/ArtistH/toolchain)
 
 
 Programming
@@ -24,4 +24,3 @@ Programming
 
 >Shell
 >>[bash](https://github.com/ArtistH/shell/tree/master/bash)
-
