@@ -3,10 +3,10 @@ layout: home
 title: Home Page
 ---
 
-Using Linux System
-==================
-[Install & Config](https://github.com/ArtistH/config)
-
+Linux System
+============
+[Install & Config](https://github.com/ArtistH/Linux-install-and-config)
+[Using]()
 [Toolchain](https://github.com/ArtistH/toolchain)
 
 
