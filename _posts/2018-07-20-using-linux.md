@@ -25,17 +25,17 @@ tags:   Linux_System
         外部命令: 根据存在的可执行文件来执行
 
 	4) man -a
-		显示匹配查询名的所有信息
+        显示匹配查询名的所有信息
 
 	5) history -c 
-		清空历史记录
+        清空历史记录
 
 	6) grep
-		grep -r 递归
-		grep -n 显示行号
-		grep -l 显示文件
-		grep -i 忽略大小写
-		grep -v 取反查询
+        grep -r 递归
+        grep -n 显示行号
+        grep -l 显示文件
+        grep -i 忽略大小写
+        grep -v 取反查询
 	
 	7) MKNOD(1)
         NAME
@@ -82,20 +82,20 @@ tags:   Linux_System
 	这个整体构成了硬盘的主引导扇区。
 	(64/16=4个分区, 因为每16字节可以标记一个分区, 所以一个硬盘最多4个主分区.)
 
-首先备份: dd < /dev/sda > filename bs=446 count=1<br>
-还原: dd < filename > /dev/sda bs=446 count=1<br>
-(破坏: dd < /dev/zero > /dev/sda bs=446 count=1)
+    首先备份: dd < /dev/sda > filename bs=446 count=1<br>
+    还原: dd < filename > /dev/sda bs=446 count=1<br>
+    (破坏: dd < /dev/zero > /dev/sda bs=446 count=1)
 
-排错:
-1) stage1出错<br>
-	症状: Boot failed<br>
-	解决: 光盘或USB启动 linux rescue, chroot /mnt/sysimage, grub-install /dev/sda.<br>
-2) stage2出错<br>
-	症状: 显示GRUB<br>
-	解决: 同1)<br>
-3) grub.conf出错<br>
-	症状: 显示grub><br>
-	解决: 手工启动修改grub.conf
+    排错:
+    1) stage1出错<br>
+        症状: Boot failed<br>
+        解决: 光盘或USB启动 linux rescue, chroot /mnt/sysimage, grub-install /dev/sda.<br>
+    2) stage2出错<br>
+        症状: 显示GRUB<br>
+        解决: 同1)<br>
+    3) grub.conf出错<br>
+        症状: 显示grub><br>
+        解决: 手工启动修改grub.conf
 
 
 ## 正则表达式
