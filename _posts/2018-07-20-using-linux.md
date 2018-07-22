@@ -38,11 +38,11 @@ tags:   Linux_System
 		grep -v 取反查询
 	
 	7) MKNOD(1)
-		NAME
-			mknod - make block or character special files
+        NAME
+		    mknod - make block or character special files
 
 		SYNOPSIS
-			mknod Name { b | c } Major Minor
+		    mknod Name { b | c } Major Minor
 			mknod Name { p }
 			创建FIFO(已命名的管道)
 
