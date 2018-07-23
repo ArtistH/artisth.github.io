@@ -75,26 +75,22 @@ tags:   Linux_System
 
 
 ## Troubleshooting
-### MBR
-	在总共512字节的主引导扇区中, MBR只占用了其中的446个字节.
-	另外的64个字节交给了DPT（Disk Partition Table硬盘分区表).
-	最后两个字节"55, AA"是分区的结束标志.
-	这个整体构成了硬盘的主引导扇区。
-	(64/16=4个分区, 因为每16字节可以标记一个分区, 所以一个硬盘最多4个主分区.)
+#### MBR
+##### 在总共512字节的主引导扇区中, MBR只占用了其中的446个字节. 另外的64个字节交给了DPT（Disk Partition Table硬盘分区表). 最后两个字节"55, AA"是分区的结束标志. 这个整体构成了硬盘的主引导扇区. (64/16=4个分区, 因为每16字节可以标记一个分区, 所以一个硬盘最多4个主分区.)
 
-    首先备份: dd < /dev/sda > filename bs=446 count=1<br>
-    还原: dd < filename > /dev/sda bs=446 count=1<br>
+    首先备份: dd < /dev/sda > filename bs=446 count=1
+    还原: dd < filename > /dev/sda bs=446 count=1
     (破坏: dd < /dev/zero > /dev/sda bs=446 count=1)
 
     排错:
-    1) stage1出错<br>
-        症状: Boot failed<br>
-        解决: 光盘或USB启动 linux rescue, chroot /mnt/sysimage, grub-install /dev/sda.<br>
-    2) stage2出错<br>
-        症状: 显示GRUB<br>
-        解决: 同1)<br>
-    3) grub.conf出错<br>
-        症状: 显示grub><br>
+    1) stage1出错
+        症状: Boot failed
+        解决: 光盘或USB启动 linux rescue, chroot /mnt/sysimage, grub-install /dev/sda.
+    2) stage2出错
+        症状: 显示GRUB
+        解决: 同1)
+    3) grub.conf出错
+        症状: 显示grub>
         解决: 手工启动修改grub.conf
 
 
