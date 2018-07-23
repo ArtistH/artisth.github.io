@@ -5,9 +5,9 @@ date:   2018-07-23
 tags:   Linux_System
 ---
 
-# find [指定查找目录] [查找规则] [查找完后执行的action]
+## find [指定查找目录] [查找规则] [查找完后执行的action]
 
-## [指定查找目录]
+### [指定查找目录]
 	shell> find /etc /home -name passwd
 	/etc/pam.d/passwd
 	/etc/default/passwd
@@ -15,7 +15,7 @@ tags:   Linux_System
  
 这里要注意的是目录之间要用空格分开
 
-## [查找规则] 
+### [查找规则] 
 #### 1. 根据文件名查找
 	-name	// 根据文件名查找（精确查找）
 	-iname	// 根据文件名查找, 但是不区分大小写.
@@ -121,7 +121,7 @@ s	socket文件
 #### 10. -nouser 和 –nogroup
 	shell> find / -nogroup –a –nouser	// 在整个系统中查找既没有属主又没有属组的文件（这样的文件通常是很危险的，我们应该及时清除掉）。
 
-## [查找完执行的action]
+### [查找完执行的action]
 > -print			默认情况下的动作  
 > -ls				查找到后用ls 显示出来  
 > -ok [command]		查找后执行命令的时候询问用户是否要执行  
@@ -142,7 +142,7 @@ s	socket文件
 
 
 
-# xargs 
+## xargs 
 #### 管道:	将前面的标准输出作为后面的标准输入  
 #### xargs:	将标准输入作为命令的参数
 
